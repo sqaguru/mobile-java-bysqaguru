@@ -10,14 +10,19 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class FirstTest {
+public class FirstTestSantoshMobile {
 	@Test
 	public void test1() throws MalformedURLException {
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+
+		desiredCapabilities.setCapability("chromedriverExecutable",
+				"D:\\sqa-guru\\charan\\charan-automation\\CharanAutomation\\resources\\drivers\\chromedriver.exe");
+
 		desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
 		desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
 		desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "bhingesantosh");
 		desiredCapabilities.setCapability(MobileCapabilityType.UDID, "EUKNAQI7HYMR6D9D");
+		desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
 		desiredCapabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 		desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
 
